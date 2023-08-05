@@ -1,7 +1,6 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Ubuntu&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Montserrat:wght@400;700&family=Ubuntu&display=swap");
 
 html {
   box-sizing: border-box;
@@ -18,7 +17,7 @@ body {
   font-size: 12px;
 }
 
-.player-container{
+.player-container {
   height: 500px;
   width: 400px;
   background-color: #fff3f3;
@@ -32,14 +31,13 @@ body {
   position: relative;
   top: -50px;
   left: 50px;
-
 }
 
-.img-container img{
-  height:100%;
+.img-container img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
-  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
 
@@ -55,12 +53,12 @@ h3 {
   text-align: center;
   font-weight: 400;
   margin: 5px 0 0;
-  color:rgb(150, 150, 150);
+  color: rgb(150, 150, 150);
 }
 
 /* Progress */
 .progress-container {
-  background:rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
   border-radius: 5px;
   cursor: pointer;
   margin: 40px 20px;
@@ -98,13 +96,11 @@ h3 {
   margin-right: 30px;
   cursor: pointer;
   user-select: none;
-
 }
 
-.fas:hover{
-  filter: brightness(80%)
+.fas:hover {
+  filter: brightness(80%);
 }
-
 
 .main-button {
   font-size: 40px;
@@ -114,8 +110,8 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
-  .player-container{
-    width: 95vw; 
+  .player-container {
+    width: 95vw;
   }
 
   .img-container {
@@ -138,18 +134,17 @@ h3 {
 
 /* List icon placement */
 
-.music-list{
-  
+.music-list {
   position: relative;
   top: 80px;
   left: -50px;
   width: 00px;
-  font-size:10px;
-
-
-
+  font-size: 10px;
 }
 
-
-
-
+.playlists {
+  position: absolute;
+  min-height: 1vh;
+  width: 500px;
+  background-color: red;
+}

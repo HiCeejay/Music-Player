@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="player-container">
         <!-- Song -->
@@ -16,7 +18,7 @@
         </div>
         <h2 id="title">Island Breeze</h2>
         <h3 id="artist">Hi_Ceejay & Paige_Speikz</h3>
-        <audio src="music/ISLAND BREEZE JOMI.wav"></audio>
+        <audio src="music/ISLAND BREEZE JOMI.mp3"></audio>
         <!-- progress -->
         <div class="progress-container" id="progress-container">
             <div class="progress" id="progress"></div>
@@ -24,7 +26,7 @@
                 <span id="current-time">0:00</span>
                 <span id="duration">1:31</span>
             </div>
-        </div> 
+        </div>
         <!-- Controls -->
         <div class="player-controls">
             <i class="fas fa-backward" id="prev" title="Previous"></i>
@@ -33,14 +35,16 @@
         </div>
     </div>
 
-        <div class="music-list">
-            <i class="fas fa-list-ul" id="list" title="Previous"></i>
-        </div>
+    <div class="music-list">
+        <i class="fas fa-list-ul" id="list" title="Previous"></i>
+    </div>
 
 
-    
+    <div class="playlists">
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
