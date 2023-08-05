@@ -74,34 +74,59 @@ playBtn.addEventListener("click", () => {
 
 // function for updating dom
 
-function loadSong(song) {
+function updateMusicText(song) {
   title.textContent = song.displayname;
   artist.textContent = song.artist;
+}
+
+function updateMusicSource(song) {
   music.src = `music/${song.name}.mp3`;
+}
+
+function updateMusicThumbnail(song) {
   image.src = `img/${song.name}.jpg`;
+}
+
+function loadSong(song) {
+  updateMusicText(song);
+  updateMusicSource(song);
+  updateMusicThumbnail(song);
 }
 
 // currentSong
 let songIndex = 0;
 
-// previous Song
-function prevSong() {
+function loadPreviousMusicIndex() {
   songIndex--;
   if (songIndex < 0) {
     songIndex = songs.length - 1;
   }
-  loadSong(songs[songIndex]);
-  playMusic(); // Start playing previous song automatically
+
+  return songIndex;
 }
 
-// Next Song
-function nextSong() {
+function loadNextMusicIndex() {
   songIndex++;
   if (songIndex > songs.length - 1) {
     songIndex = 0;
   }
-  loadSong(songs[songIndex]);
-  playMusic(); // Start playing the next song automatically
+  return songIndex;
+}
+
+function getSongIndex(index) {
+  return songs[index];
+}
+// previous Song
+function prevSong() {
+  index = songIndex = loadPreviousMusicIndex();
+  loadSong(getSongIndex(index));
+  playMusic();
+}
+
+function nextSong() {
+  songIndex = loadNextMusicIndex();
+  loadSong(getSongIndex(songIndex));
+  playMusic();
 }
 
 // Update Progress Bar & Time
@@ -135,7 +160,7 @@ function updateProgressBar(e) {
 }
 
 // on load select first song
-loadSong(songs[songIndex]);
+loadSong(getSongIndex(songIndex));
 
 // Set Progress Bar
 function setProgressBar(e) {
