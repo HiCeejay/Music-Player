@@ -80,7 +80,7 @@ playMusic();
 function loadSong(song) {
     title.textContent = song.displayname;
     artist.textContent = song.artist;
-    music.src = `music/${song.name}.wav`;
+    music.src = `music/${song.name}.mp3`;
     image.src = `img/${song.name}.jpg`;
 }
 
